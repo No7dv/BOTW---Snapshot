@@ -1,0 +1,286 @@
+/* ====== Mobile First (max-width: 600px) ====== */
+@media (max-width: 600px) {
+
+    /* ===== Reset & base ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      background: var(--white-color);
+      color: var(--black-color);
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .page-wrapper {
+      flex: 1 0 auto;
+      width: 100%;
+    }
+  
+    /* ===== Header & Navigation ===== */
+    header {
+      background-color: var(--white-color);
+      width: 100%;
+    }
+    .logo {
+        margin-top: .5em;
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      text-align: center;
+      font-size: 2em;
+    }
+    .nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-burger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background: transparent;
+      margin-top: .5em;
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+    }
+    .nav-list {
+      display: none; /* caché par défaut */
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1em;
+      width: 100%;
+      list-style: none;
+      background: var(--white-color);
+      padding: 0;
+      margin: 0;
+    }
+    /* Classe ajoutée par JS pour afficher le menu */
+
+    .menu-line {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-link {
+      color: var(--black-color);
+      opacity: 0.9;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 0.06em;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: .5em;
+      color: var(--light-2-color);
+    }
+
+    .nav-link.active {
+      opacity: 1;
+      font-weight: 400;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+      color: var(--black-color);
+      opacity: 1;
+      font-weight: 500;
+    }
+  
+    /* ===== Home Grid ===== */
+    .home-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* une colonne en mobile */
+      gap: 12px;
+      padding: 0 2vw;
+    }
+    .container-img {
+      position: relative;
+      width: 100%;
+    }
+    .home-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .name-img {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      font-size: 1.08em;
+      text-shadow: 1px 1px 3px var(--black-color);
+      color: var(--white-color);
+      background: rgba(0,0,0,0.32);
+      padding: 0.3em 0.6em;
+      border-radius: 7px;
+    }
+  
+    /* ===== Sections générales ===== */
+    section {
+      margin: 2.5vw 0.8vw;
+      padding: 0.7em 0;
+    }
+    /* Garde seulement marges et alignements pour les titres */
+    .h1, .about-title, .montreal, .h3 {
+      margin-bottom: 0.2em;
+      text-align: center;
+    }
+  
+    /* ===== Section About ===== */
+    .section-about {
+      background: var(--black-color);
+      color: var(--white-color);
+      padding: 1.6em 0.8em;
+    }
+    .grid-finepix {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 9px;
+      max-width: 100%;
+      margin: 1.2em auto 1em auto;
+    }
+    .grid-finepix img {
+      width: 100%;
+      height: auto;
+      border-radius: 9px;
+    }
+    .finepiximg1 {
+      display: block;
+      width: 100%;
+      max-width: 100vw;
+      margin: 1.3em auto;
+    }
+    .space-p {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    /* ===== Section X100VI ===== */
+    .section-x100 {
+      background: var(--white-color);
+      color: var(--black-color);
+      padding: 1.4em 0.8em;
+    }
+    .section-x100 h1 {
+        font-size: 5rem;
+    }
+    .section-list {
+      margin: 0;
+      padding: 1em 0;
+      list-style: none;
+    }
+    .section-list li {
+      padding: 0.6em 0;
+    }
+    .section-item h3 {
+        font-weight: 500;
+        color: var(--black-color);
+    }
+    .model-video {
+      width: 100%;
+      max-width: 100vw;
+      display: block;
+      margin: 1.2em 0;
+      border-radius: 9px;
+      border: none;
+      background: #000;
+    }
+  
+    /* ===== Carrousel ===== */
+    .section-carrousel {
+      background: #111;
+      padding: 1em 0 1.6em 0;
+    }
+    .carrousel {
+      overflow-x: auto;
+      padding: 0 0.4em;
+    }
+    .carrousel-track {
+      display: flex;
+      gap: 1em;
+      width: max-content;
+    }
+    .carrousel img {
+      height: 110px;
+      width: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+      max-width: 90vw;
+    }
+  
+    /* ===== Footer ===== */
+    .main-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.1em 0 0.6em 0;
+    }
+    .container-social {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      align-items: center;
+      padding: .3em 0;
+    }
+    .icon-social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: transparent;
+      transition: background-color .3s;
+    }
+    .icon-social svg {
+      width: 20px;
+      height: 20px;
+      color: var(--black-color);
+    }
+    .icon-social:hover {
+      background: var(--black-color);
+    }
+    .icon-social:hover svg {
+      color: var(--white-color);
+    }
+    .sign {
+      display: block;
+      text-align: center;
+      letter-spacing: 0.18em;
+      margin: .7em auto 0;
+      font-size: 1em;
+      color: var(--light-2-color, #6d6d6d);
+    }
+  
+    /* ===== Images ===== */
+    img {
+      filter: grayscale(20%);
+      transition: filter .3s;
+    }
+    img:hover {
+      filter: grayscale(0%);
+    }
+
+    .img-empty {
+        display: none !important;
+    }
+  
+    /* ===== Animations reveal ===== */
+    .fade-in  { animation: fade-in 1s forwards; }
+    .fade-out { animation: fade-out 1s forwards; }
+    @keyframes fade-in  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+  
+    .reveal { opacity: 0; transition: all .8s; }
+    .reveal-visible { opacity: 1; }
+  }
+  
