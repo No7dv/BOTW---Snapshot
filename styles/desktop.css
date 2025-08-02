@@ -1,13 +1,22 @@
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
 
     /* NAV - HEADER */
+
     .title {
         margin-bottom: 36px;
         margin-left: 18px;
+        margin-top: 18px;
     }
 
     .nav {
         margin-bottom: 15vh;
+
+        position: static;
+        display: block;
+    }
+
+    .nav-burger {
+        display: none;
     }
 
     .menu {
