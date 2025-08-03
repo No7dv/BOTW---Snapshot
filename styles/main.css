@@ -1,3 +1,4 @@
+/* initialisation */
 * {
     margin: 0;
     padding: 0;
@@ -21,19 +22,13 @@ body {
     min-height: 100vh;
 }
 
+header {
+background-color: var(--white-color);
+width: 100%;
+}
+
 footer {
     flex-shrink: 0;
-}
-
-.reveal {
-    opacity: 0;
-    /* transform: translateY(180px); */
-    transition: all .8s ease;
-}
-
-.reveal-visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .page-wrapper {
@@ -42,11 +37,7 @@ footer {
     flex: 1 0 auto;
 }
 
-header {
-background-color: var(--white-color);
-width: 100%;
-}
-
+/* ===== NAVBAR ===== */
 .nav-list {
     list-style: none;
 }
@@ -85,16 +76,18 @@ width: 100%;
     transform: scaleX(.5);
 }
 
-
+/* nav-link actif */
 .active {
     color: var(--black-color);
     opacity: 1;
 }
 
+/* section global */
 section {
     margin: .9vh .7vw;
 }
 
+/* img global */
 img {
     filter: grayscale(20);
     transition: filter .3s ease;
@@ -103,12 +96,16 @@ img {
 img:hover {
     filter: grayscale(0);
     transition: filter .3s ease;
-
 }
 
-/* classe pour piloter l’opacité */
+/* ===== classe pour piloter l’opacité ===== */
+/* pour la vidéo X100VI */
 .fade-in  { animation: fade-in 1s forwards; }
 .fade-out { animation: fade-out 1s forwards; }
 
 @keyframes fade-in  { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+
+/* ===== Reveal Animation ===== */
+.reveal { opacity: 0; transition: all 1s; transform: translateY(30px)}
+.reveal-visible { opacity: 1; transform: translateY(0)}
