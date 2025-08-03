@@ -1,131 +1,88 @@
-/* -----------------------------------
-   TYPOGRAPHIE GLOBALE
------------------------------------- */
-
-/* Base sur 1rem = 16px */
 :root {
-  /* Échelle typographique */
-  --step--1: 0.875rem; /* 14px */
-  --step-0: 1rem;      /* 16px */
-  --step-1: 1.125rem;  /* 18px */
-  --step-2: 1.25rem;   /* 20px */
-  --step-3: 1.5rem;    /* 24px */
-  --step-4: 2rem;      /* 32px */
-  --step-5: 2.5rem;    /* 40px */
-  --step-6: 3rem;      /* 48px */
-  --step-title: 6.5rem; /* 104px */
-
-  /* Typo fluide (clamp) */
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: 1.125rem;
+  --step-2: 1.25rem;
+  --step-3: 1.5rem;
+  --step-4: 2rem;
+  --step-5: 2.5rem;
+  --step-6: 3rem;
+  --step-title: 6.5rem;
   --fluid-title: clamp(1em, 2vw, 2.250em);
   --fluid-subtitle: clamp(1.25rem, 2vw, 1.75rem);
   --fluid-body: clamp(1rem, 1.5vw, 1.25rem);
-
-  /* Hauteur de ligne recommandée */
+  --fluid-nav-link: clamp(1rem, 1.5vw, 1.5rem);
   --lh-title: .9;
-  --lh-body: 1.5;
+  --lh-body: 1.5
 }
 
-/* -----------------------------------
-   CLASSES UTILITAIRES
------------------------------------- */
-
-/* Corps de texte */
 .body-text {
   font-size: var(--fluid-body);
   line-height: var(--lh-body);
-  font-weight: 300;
+  font-weight: 300
 }
 
-/* Titres */
+.h1,
 .logo {
-  font-size: var(--fluid-title);
   line-height: var(--lh-title);
   font-weight: 400;
-  text-transform: uppercase;
+  text-transform: uppercase
+}
+
+.logo {
+  font-size: var(--fluid-title)
 }
 
 .h1 {
   font-size: var(--step-title);
-  line-height: var(--lh-title);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: -3px;
+  letter-spacing: -3px
+}
+
+.h2,
+.h3 {
+  line-height: var(--fluid-subtitle)
 }
 
 .h2 {
   font-size: var(--step-4);
-  line-height: var(--fluid-subtitle);
-  font-weight: 600;
+  font-weight: 600
 }
 
 .h3 {
   font-size: var(--step-3);
-  line-height: var(--fluid-subtitle);
-  font-weight: 500;
+  font-weight: 500
 }
 
 .nav-link {
-  /* font-size: .7em; */
-  line-height: 100%;
+  font-size: var(--step-0);
+  line-height: var(--fluid-nav-link);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0;
-}
-
-/* Labels */
-.label {
-  font-size: var(--step-0);
-  font-weight: 600;
-}
-
-/* Boutons */
-.btn-text {
-  font-size: var(--step-0);
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-/* Petits textes (ex: footer, mentions, etc.) */
-.text-small {
-  font-size: var(--step--1);
-  line-height: 1.4;
-}
-
-/* Texte accentué */
-.text-italic {
-  font-style: italic;
+  letter-spacing: .15em
 }
 
 .text-light {
   color: var(--light-color);
-  font-weight: 300;
+  font-weight: 300
 }
 
 .text-light-2 {
   color: var(--light-2-color);
-  font-weight: 300;
+  font-weight: 300
 }
 
 .bebafont {
-    font-family: "Bebas Neue";
+  font-family: "Bebas Neue"
 }
 
 .montrealfont {
-    font-family: "Neue Montreal";
+  font-family: "Neue Montreal"
 }
 
 .text-white {
-    color: var(--white-color);
-}
-
-.text-black {
-    color: var(--black-color);
+  color: var(--white-color)
 }
 
 .bg-black {
-    background-color: var(--black-color);
-}
-
-.bg-white {
-    background-color: var(--white-color);
+  background-color: var(--black-color)
 }
