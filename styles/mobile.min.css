@@ -43,8 +43,11 @@ body {
 }
 
 header {
-    background-color: var(--white-color);
-    width: 100%
+    position: sticky;
+    top: 0;
+    min-height: 80px;
+    width: 100%;
+    background-color: var(--white-color)
 }
 
 .logo {
@@ -125,7 +128,7 @@ header {
 
 .home-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1fr;
     gap: 12px;
     padding: 0 2vw
 }
@@ -242,7 +245,7 @@ section {
 .x100-list li {
     padding: .6em 0 .6em .6em;
     border-left: 3px solid var(--black-color);
-    margin-bottom: .8em
+    margin: 2em 0
 }
 
 .model-video {
@@ -252,7 +255,9 @@ section {
     margin: 1.2em 0;
     border-radius: 9px;
     border: none;
-    background: #000
+    background: #000;
+    pointer-events: none;
+    user-select: none;
 }
 
 .section-carrousel {
@@ -324,12 +329,7 @@ section {
 }
 
 img {
-    filter: grayscale(20%);
-    transition: filter .3s
-}
-
-img:hover {
-    filter: grayscale(0%)
+    filter: none
 }
 
 .container-img:has(.img-empty) {
